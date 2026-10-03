@@ -18,7 +18,7 @@ const Home = () => {
       <div className="flex justify-center">
         <button
           type="button"
-          onClick={() => setClick("clicked")}
+          onClick={() => setClick(true)}
           className="text-lg bg-blue-500 text-white font-medium rounded-3xl py-1 px-4 cursor-pointer hover:scale-105 transition-all delay-75"
         >
           Check Weather
@@ -27,7 +27,7 @@ const Home = () => {
 
       {/* ------------->  Modal */}
 
-      {click && <LocationModal></LocationModal>}
+      {click && <LocationModal close={() => setClick(false)}></LocationModal>}
     </div>
   );
 };
